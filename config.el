@@ -3,8 +3,8 @@
 ;; Place your private configuration here
 (setq
  tab-width 2
- projectile-project-search-path '("~/projects/")
- display-line-numbers-type 'relative)
+ display-line-numbers-type 'nil
+ projectile-project-search-path '("~/projects/"))
 
 ;; remapping example
 ;; (map! "C-h" 'evil-window-left
