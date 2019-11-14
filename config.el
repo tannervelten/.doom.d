@@ -1,10 +1,13 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here
 (setq
  tab-width 2
  display-line-numbers-type 'nil
  projectile-project-search-path '("~/projects/"))
+
+;;; :editor evil
+(setq evil-split-window-below t
+      evil-vsplit-window-right t)
 
 ;; remapping example
 ;; (map! "C-h" 'evil-window-left
