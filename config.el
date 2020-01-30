@@ -1,13 +1,15 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
 (setq
- tab-width 2
- display-line-numbers-type 'nil
+ display-line-numbers-type 'relative
  projectile-project-search-path '("~/projects/"))
 
 ;;; :editor evil
 (setq evil-split-window-below t
       evil-vsplit-window-right t)
+
+(setq doom-theme 'gruber-darker
+      doom-font (font-spec :family "Consolas"))
 
 ;; remapping example
 ;; (map! "C-h" 'evil-window-left
