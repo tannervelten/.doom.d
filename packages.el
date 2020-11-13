@@ -7,4 +7,4 @@
 ;; (package! builtin-package :disable t)
 
 (package! rainbow-delimiters)
-(package! gruber-darker-theme)
+(package! tide :disable t)
