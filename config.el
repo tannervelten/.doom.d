@@ -8,12 +8,10 @@
 
       tab-width 2
       js-indent-level 2
-      tide-mode nil
       global-visual-line-mode t
       display-line-numbers-type 'relative
-      projectile-project-search-path '("~/projects/" "~/caspar/"))
+      projectile-project-search-path '("~" "~/data" "~/data/python" "~/data/javascript" "~/data/protobuf" "~/data/thrift"))
 
-;; Prevents some cases of Emacs flickering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 ;;; :editor evil
@@ -25,3 +23,25 @@
         mac-command-key-is-meta t
         mac-command-modifier 'meta
         mac-option-modifier 'none))
+
+(map! :n
+      [return] "ojk"
+      [S-return] "Ojk"
+      "M-i" (general-simulate-key "a_jkr")
+      "M-s" #'save-buffer
+
+      :leader
+      "wx" #'kill-buffer-and-window)
+
+;; Give underscore the word syntax-class
+(modify-syntax-entry ?_ "w")
+
+;; auto format on save
+;; (add-hook 'python-mode-hook 'yapf-mode)
+
+(setq magit-blame-styles
+      '((margin
+         (margin-format " %s%f" " %C %a" " %H")
+         (margin-width . 42)
+         (margin-face . magit-blame-margin)
+         (margin-body-face magit-blame-dimmed))))
